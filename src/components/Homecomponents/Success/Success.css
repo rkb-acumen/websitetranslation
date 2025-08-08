@@ -1,0 +1,137 @@
+.success .swiper-scrollbar {
+    background-color: #fff;
+    height: 15px;
+    border: 1px solid #D7D7D7;
+    position: relative; 
+    width: 19% !important;
+    margin: 5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 2px;
+}
+.swiper.success{padding-top: 58px;}
+
+.success .swiper-scrollbar-drag {
+    background: linear-gradient(210deg, #F2361E 0%, #F54D28 48.49%, #FFAF52 100%);
+    width: 2.5rem !important;
+    border-radius: 10px !important; 
+    cursor:  grab;
+}
+
+
+.swiper.success {
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.success .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success .swiper-slide .card-btm {
+    display: none;
+}
+
+.success .swiper-slide-active .card-btm {
+    display: block;
+}
+
+
+.success .brd2 {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    position: relative;
+    box-sizing: border-box;
+    /* color: #FFF; */
+    background: #FFFFFF;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    border-radius: 2em;
+}
+
+@media (width < 400px) {
+    .success .brd2{
+        border-radius: 1.5em;
+    }
+}
+@media (width > 1204px) {
+    .success .swiper-wrapper{
+        height: 70vh;
+    }
+}
+@media (width < 500px) {
+    .success .swiper-wrapper{
+        height: 60vh;
+    }
+}
+
+ 
+
+.success .swiper-slide-active .brd2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    /* !importanté */
+    border-radius: inherit;
+    /* background: linear-gradient(to bottom, #FFFFFF, #252525); */
+}
+
+ 
+ 
+.success-story-slider {
+    padding-top: 50px;
+
+}
+
+.success-container {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+@media (max-width :767px) {
+    .success-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+   
+}
+@media (min-width:577px) and (max-width : 768px) {
+    .success .swiper-scrollbar{
+        width: 34% !important;
+    }
+    
+}
+@media (max-width : 576px) {
+    .success .swiper-scrollbar{
+        width: 54% !important;
+    }
+    
+}
+
+.success-client-logo{
+     
+    width: 100px !important;
+}
+
+.Success{
+    background-color: #ffd2a2;
+    background-image: url('/ourservicepattern/patterntwo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}

@@ -1,0 +1,22 @@
+.Casestudies-inner-title-div{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.Casestudies-sec{
+    position: relative;
+    padding-bottom: 100px;
+}
+.casestudies-slider-div{
+    padding-top: 100px;
+}
+
+@media (max-width:767px) {
+    .casestudies-slider-div{
+        padding-top: 60px;
+    }
+    .Casestudies-inner-title-div{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}

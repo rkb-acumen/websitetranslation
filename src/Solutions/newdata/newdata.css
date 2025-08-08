@@ -1,0 +1,8 @@
+.container-image-div {
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+  }
+
+.know-more-hide-div {
+  display: none;
+}

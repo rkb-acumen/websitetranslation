@@ -1,0 +1,110 @@
+.OurMissition{
+    background: url("/AboutUs/Background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-color: #131313 !important;
+}
+.vertical-border{
+    position: relative;
+}
+
+.vertical-warapper:nth-child(2) .vertical-border::before{
+    content: '';
+    position: absolute;
+    border-right: 1px solid #6D6D6D;
+    height: 90%;
+    width: 1px;
+    top: -100%;
+    left: 25%;
+}
+
+.vertical-warapper:nth-child(3) .vertical-border::before{
+    content: '';
+    position: absolute;
+    border-right: 1px solid #6D6D6D;
+    height: 110%;
+    width: 1px;
+    top: -120%;
+    left: 25%;
+}
+
+@media (min-width : 602px) and (max-width : 1023px) {
+    .vertical-warapper:nth-child(2) .vertical-border::before{
+        content: '';
+        position: absolute;
+        border-right: 1px solid #6D6D6D;
+        height: 100px;
+        width: 1px;
+        top: -115px;
+        left: 15%;
+    }
+    
+    .vertical-warapper:nth-child(3) .vertical-border::before{
+        content: '';
+        position: absolute;
+        border-right: 1px solid #6D6D6D;
+        height: 100px;
+        width: 1px;
+        top: -115px;
+        left: 15%;
+    }  
+}
+
+
+
+@media (min-width : 1024px) {
+    .vertical-warapper:first-child .vertical-border::before{
+        content: '';
+        position: absolute;
+        border-right: 1px solid #6D6D6D;
+        height: 60%;
+        width: 1px;
+        top: -60px;
+        left: 50%;
+    }
+    .vertical-warapper:last-child .vertical-border::after{
+        content: '';
+        position: absolute;
+        border-right: 1px solid #6D6D6D;
+        height: 80px;
+        width: 1px;
+        top: 110px;
+        left: 50%;
+    }
+    
+    .vertical-warapper:nth-child(2) .vertical-border::before{
+        content: '';
+        position: absolute;
+        border-right: 1px solid #6D6D6D;
+        height: 150px;
+        width: 1px;
+        top: -130px;
+        left: 50%;
+    }
+    
+    .vertical-warapper:nth-child(3) .vertical-border::before{
+        content: '';
+        position: absolute;
+        border-right: 1px solid #6D6D6D;
+        height: 150px;
+        width: 1px;
+        top: -130px;
+        left: 50%;
+    }  
+}
+
+
+
+
+/* .vertical-border::before{
+    content: '';
+    position: absolute;
+    border-right: 1px solid #6D6D6D;
+    height: 100%;
+    width: 1px;
+    top: -80%;
+    left: 10%;
+} */
+
+

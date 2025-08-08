@@ -1,0 +1,82 @@
+.CookiePolicy,
+.Privacy {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+}
+.CookieInner,
+.PrivacyInner{
+    border-top: 1px solid #D7D7D7;
+}
+.cookietitle,
+.Privacytitle {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cookie-div h2,
+.cookie-div h3,
+.cookie-div h4,
+.cookie-div h5,
+.cookie-div h6,
+.Privacy-div h2,
+.Privacy-div h3,
+.Privacy-div h4,
+.Privacy-div h5,
+.Privacy-div h6 {
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.cookie-div p,
+.Privacy-div p {
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.cookie-div ul,
+.Privacy-div ul {
+    list-style-type: circle;
+    padding-left: 28px;
+}
+
+.cookie-div li,
+.Privacy-div li {
+    padding-bottom: 10px;
+}
+
+@media (width < 768px) {
+
+    .CookiePolicy,
+    .Privacy {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 60px;
+        margin: 0 auto;
+    }
+
+    .cookie-div h2,
+    .cookie-div h3,
+    .cookie-div h4,
+    .cookie-div h5,
+    .cookie-div h6,
+    .Privacy-div h2,
+    .Privacy-div h3,
+    .Privacy-div h4,
+    .Privacy-div h5,
+    .Privacy-div h6 {
+        font-size: 20px;
+        font-weight: 300;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .Privacy-div p {
+        text-align: justify;
+    }
+}

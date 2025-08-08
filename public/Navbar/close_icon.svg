@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.7 33.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1=".1" y1="2.94" x2="16.4" y2="2.94" gradientTransform="translate(0 33.89) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ee3a24"/>
+      <stop offset="1" stop-color="#fbaf54"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="18.44" x2="29.9" y2="18.44" gradientTransform="translate(0 33.89) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ee3a24"/>
+      <stop offset="1" stop-color="#fbaf54"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="4.43" y1="20.92" x2="20.73" y2="20.92" gradientTransform="translate(4.77 35.87) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ee3a24"/>
+      <stop offset="1" stop-color="#fbaf54"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="4.43" y1="16.96" x2="20.73" y2="16.96" gradientTransform="translate(3.09 -.33) rotate(90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ee3a24"/>
+      <stop offset="1" stop-color="#fbaf54"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <g>
+      <polygon class="cls-4" points=".8 28.1 .1 28.8 5.1 33.8 21.7 33.8 21.7 32.8 5.5 32.8 .8 28.1"/>
+      <polygon class="cls-3" points="38.7 16.8 38.7 29.9 6.5 29.9 1 24.6 1 1 33.2 1 38.8 6.3 39.5 5.6 33.6 0 0 0 0 25 6.1 30.9 39.7 30.9 39.7 16.8 38.7 16.8"/>
+      <rect class="cls-2" x="9.2" y="14.45" width="21.7" height="1" transform="translate(-4.7 18.56) rotate(-45)"/>
+      <rect class="cls-1" x="19.55" y="4.1" width="1" height="21.7" transform="translate(-4.7 18.56) rotate(-45)"/>
+    </g>
+  </g>
+</svg>

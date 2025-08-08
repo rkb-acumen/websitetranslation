@@ -1,0 +1,137 @@
+.Leadership-sec {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 100px;
+
+}
+
+.leadership-para-div {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.leadership-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.leadership-col:nth-child(1) {
+    max-width: 40%;
+    width: 100%;
+}
+
+.leadership-col:nth-child(2) {
+    max-width: 60%;
+    width: 100%;
+}
+
+.leadership-img {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+
+}
+
+.leadership_img_div {
+    margin-top: 30px; 
+    padding-bottom: 30px;
+    position: relative;
+}
+.leadership-border-title{
+    border-top: 1px solid #6D6D6D;
+}
+.leadership_img_icon_div {
+    position: absolute;
+    bottom: 55px;
+    top: auto;
+    right: 20px;
+}
+
+/* @media (width < 1024px) and  (width > 767px) {
+    .leadership_img_icon_div {
+        position: absolute;
+        bottom: 155px; 
+        right: 10px;
+    }
+}
+  */
+
+
+.leadership_img_icon {
+    width: 60px;
+    height: 60px;
+}
+
+.ceo-name {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.ceo-designation {
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.leadership-social-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.social-icon-link {
+    margin-left: 10px;
+}
+
+@media (max-width:767px) {
+
+    .Leadership-sec {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .leadership-para-div {
+        font-size: 18px;
+    }
+
+    .leadership_img_div {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .leadership_img_icon_div_mob{
+        bottom: 40px ;
+        right: 10px;
+        position: absolute;
+    }
+    .ceo-name {
+        font-size: 20px;
+    }
+
+    .ceo-designation {
+        font-size: 16px;
+    }
+  
+}
+
+.popup-enter {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .popup-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .popup-exit {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .popup-exit-active {
+    transform: translateY(-100%);
+    opacity: 0;
+  }

@@ -1,0 +1,53 @@
+.servicesmobile{
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background: linear-gradient(180deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, #FFFFFF, #252525);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    padding: 0;
+    max-width: 200px;
+}
+.servicesmobile-title{
+    font-size: 30px;
+    font-weight: 400;
+    max-width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.servicesmobile-para{
+    font-weight: 400;
+    color: #454545;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.ourservices_mobile_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+.ourservices_mobile_slider_bg{
+    background-image: url(/OurService/sectiontwobg.png);
+    background-size: 100% auto;
+    background-position-y: 398px;
+    
+    background-repeat: no-repeat;
+    
+}
+
+.ourservices_mobile_slider_container>.swiper-pagination1 .swiper-pagination-bullet {
+    background: transparent;
+    border:1.5px solid #6D6D6D;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+.ourservices_mobile_slider_container>.swiper-pagination1{
+    position: relative;
+    padding-top: 30px;
+}
+.ourservices_mobile_slider_container>.swiper-pagination1 .swiper-pagination-bullet-active{
+    background: linear-gradient(180deg, #F2361E, #F54D28, #FFAF52);
+    border:none;
+
+}

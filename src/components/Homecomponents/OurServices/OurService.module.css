@@ -1,0 +1,25 @@
+/* .service_bg{
+    background-image: url('/OurService/sectiontwobg.png');
+    background-size: 100%;
+    background-position-y: 293px;
+    background-repeat: no-repeat;
+  } */
+  
+  /* .dot_service_parttern{
+    background-image: url('/OurService/servicePattern.png');
+    background-size: cover;
+    background-position: center;
+  } */
+/* 
+@media (widht > 1700px) {
+  .service_bg{ 
+    background-position-y: 500px; 
+  }
+  
+} */
+
+.ourservices_container{
+  padding-left: 60px;
+  padding-right: 60px;
+}
+

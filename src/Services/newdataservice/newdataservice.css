@@ -1,0 +1,4 @@
+.container-image-div {
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+}

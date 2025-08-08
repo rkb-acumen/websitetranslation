@@ -1,0 +1,37 @@
+/* .Seamless {
+    height: 65vh;
+}
+
+@media (min-width: 640px) {
+    .Seamless {
+        height: 80vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .Seamless {
+        height: 85vh;
+    }
+}
+ 
+@media (min-width: 1024px) {
+    .Seamless {
+        height: 100vh;
+    }
+} 
+@media (min-width: 1250px) {
+    .Seamless {
+        height: 100vh;
+    }
+}
+ 
+@media (min-width: 1440px) {
+    .Seamless {
+        height: 100vh;
+    }
+} 
+@media (min-width: 1700px) {
+    .Seamless {
+        height: auto;
+    }
+} */

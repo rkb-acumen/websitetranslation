@@ -1,0 +1,175 @@
+/* .insights_slider_container .swiper-wrapper{
+margin-left: 60px;
+} */
+.commonblog_slider_container {
+    padding: 2px;
+    position: inherit !important;
+  }
+
+  .brd_section {
+    display: flex!important;
+    align-items: center!important;
+    width: 100%!important;
+    position: relative!important;
+    box-sizing: border-box!important;
+    color: #fff!important;
+    background: #fff!important;
+    background-clip: padding-box!important;
+    border: 1px solid transparent!important;
+    border-radius: 1em!important;
+}
+
+.brd_section::before{
+  content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+180deg
+, #fff, #666);
+}
+  
+  /* .insights_slider_container .swiper-wrapper .swiper-slide:last-child{
+    
+    margin-right: 250px !important;
+  
+  } */
+  .commonblog_slider_container .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-image: url(/OurService/acumenvelocit/ICON-06.svg) !important;
+    background-size: 40px;
+    background-position: 100%;
+    top: auto !important;
+    left: 70px;
+    bottom: 8px;
+    background-repeat: no-repeat;
+  }
+  
+  .commonblog_slider_container .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-image: url(/OurService/acumenvelocit/ICON-05.svg) !important;
+    background-size: 40px;
+    background-position: 100%;
+    top: auto !important;
+    left: 0px;
+    bottom: 8px;
+    background-repeat: no-repeat;
+  }
+  
+  .commonblog_slider_container .swiper-button-next::after {
+    content: none;
+  }
+  
+  .commonblog_slider_container .swiper-button-prev::after {
+    content: none;
+  }
+  
+  .common-custom-nav-blog{
+    position: absolute;
+    top: 110px;
+    right: 174px;
+  }
+  
+  .common-client-img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+  }
+  
+  @media (max-width:767px) {
+    .common-title-div {
+      margin: 2px 3px;
+  
+    }
+  
+    .common-custom-nav-blog {
+      top: 60px !important;
+      right: 130px !important;
+    }
+  
+    .commonblog_slider_container .swiper-wrapper {
+      margin-left: 15px;
+    }
+  
+    .brd_section::before {
+      background: none;
+  
+    }
+  
+    .brd_section {
+      background: none;
+    }
+  
+    .common-title-main {
+      /* display: flex; */
+      align-items: center;
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+      color: #fff;
+      background: #fff;
+      background-clip: padding-box;
+      border: 1px solid transparent;
+      border-radius: 1em;
+    }
+  
+    .common-title-main:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #fff, #666);
+    }
+  }
+  
+  
+  .common-title-div-bg1 {
+    background-image: url("/insights/common-Pattern.png");
+    background-size: 182px;
+    background-repeat: no-repeat;
+    background-position: right top;
+  
+  }
+  
+  .common-title-div-bg2 {
+    background-image: url("/insights/common-Pattern-02.png");
+    background-size: 182px;
+    background-repeat: no-repeat;
+    background-position: right top;
+  
+  }
+  
+  .commonblog_slider_container .swiper-slide:nth-child(4n-3) .common-title-div-bg1 {
+    background-image: url(/insights/purpule-pattern.jpg);
+      background-color: #460074;
+  }
+  .commonblog_slider_container .swiper-slide:nth-child(4n-2) .common-title-div-bg1 {
+    background-image: url(/insights/red-pattern.jpg);
+    background-color: #e3072d;
+  }
+  
+  .commonblog_slider_container .swiper-slide:nth-child(4n-1) .common-title-div-bg1 {
+    background-image: url(/insights/blue_pattern.jpg);
+    background-color: #0142f1;
+  }
+  
+  
+  
+  .commonblog_slider_container .swiper-slide:nth-child(4n) .common-title-div-bg1 {
+    background-image: url(/insights/yellow-patttern.jpg);
+    background-color: #ffba40;
+  }

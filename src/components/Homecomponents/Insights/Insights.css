@@ -1,0 +1,30 @@
+.home_insights_inner_div{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.home_insights{
+    position: relative;
+    padding-bottom: 100px;
+}
+.insight-slider-div{
+    padding-top: 50px;
+}
+@media (max-width:767px) {
+    .home_insights_inner_div{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .insights-custom-nav{
+        top: 51px !important;
+    right: 130px !important;
+    }
+    /* .insights_slider_container .swiper-wrapper{
+        margin-left: 15px;
+    } */
+    .insight-slider-div{
+        padding-top: 50px;
+    }
+    .home_insights{
+        padding-bottom: 60px;
+    }
+}

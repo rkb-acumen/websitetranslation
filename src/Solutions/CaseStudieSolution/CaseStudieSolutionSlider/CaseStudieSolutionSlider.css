@@ -1,0 +1,142 @@
+.casestudies-brd {
+    width: 100%;
+  }
+  
+  .casestudies_slider_container {
+    padding: 2px;
+    position: static !important;
+  }
+  
+  .casestudies_slider_container .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    background-image: url(/insights/insight-next.svg) !important;
+    background-size: 50px;
+    background-position: 100%;
+    top: auto !important;
+    left: 70px;
+    bottom: 8px;
+    background-repeat: no-repeat;
+  }
+  
+  .casestudies_slider_container .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-image: url(/insights/insight-prev.svg) !important;
+    background-size: 50px;
+    background-position: 100%;
+    top: auto !important;
+    left: 0px;
+    bottom: 8px;
+    background-repeat: no-repeat;
+  }
+  
+  .casestudies_slider_container .swiper-button-next::after {
+    content: none;
+  }
+  
+  .casestudies_slider_container .swiper-button-prev::after {
+    content: none;
+  }
+  
+  .casestudies-custom-nav {
+    position: absolute;
+    top: 54px;
+    right: 174px;
+  }
+  
+  .casestudies-client-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+  }
+  
+  .casestudies-title-main {
+    /* display: flex; */
+    align-items: center;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    color: #fff;
+    background: #fff;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 1em;
+  }
+  
+  .casestudies-title-main:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #fff, #666);
+  }
+  
+  .casestudies-title-div {
+    margin: 2px 3px;
+  
+  }
+  
+  @media (max-width:767px) {
+  
+  
+    .casestudies-custom-nav {
+      top: 51px !important;
+      right: 130px !important;
+    }
+  
+    /* .casestudies_slider_container .swiper-wrapper{
+            margin-left: 15px !important;
+        }
+       */
+  
+  }
+  
+  
+  .casestudies-title-div-bg1 {
+    background-image: url("/insights/Insights-Pattern.png");
+    background-size: 182px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: auto;
+  
+  }
+  
+  .casestudies-title-div-bg2 {
+    background-image: url("/insights/Insights-Pattern-02.png");
+    background-size: 182px;
+    background-repeat: no-repeat;
+    background-position: right top;
+  
+  }
+  
+  .casestudies-title {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  
+  }
+  
+  .casestudies_slider_container .swiper-slide:nth-child(1) .bigdatacolor {
+    background-color: #460073;
+  }
+  
+  .casestudies_slider_container .swiper-slide:nth-child(2) .bigdatacolor {
+    background-color: #e2072e;
+  }
+  
+  .casestudies_slider_container .swiper-slide:nth-child(3) .bigdatacolor {
+    background-color: #0041f0;
+  }
+  
+  .casestudies_slider_container .swiper-slide:nth-child(4) .bigdatacolor {
+    background-color: #ffba40;
+  }

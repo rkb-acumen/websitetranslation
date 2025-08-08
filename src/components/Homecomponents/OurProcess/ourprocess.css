@@ -1,0 +1,41 @@
+.sameclass:nth-child(even) {
+  margin-top: 180px;
+  text-align: center;
+  /* margin-right: -40px; */
+}
+
+.sameclass:nth-child(odd) {
+  margin-top: -30px;
+  text-align: center;
+  /* margin-right: -40px; */
+}
+
+.sameclass.sameactive {
+
+  
+  font-weight: 200;
+}
+
+.sameclass {
+  font-size: 14px;
+  font-weight: 300;
+
+}
+
+
+.ourprorocess-container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* p:nth-child(even) {
+    background: lightgreen;
+  } */
+ 
+  @media (max-width:767px) {
+    .ourprorocess-container{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+  }

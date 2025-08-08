@@ -1,0 +1,56 @@
+ 
+
+.ss1-btn{
+    /* background: linear-gradient(45deg, transparent 4px, #000 0, #000 98.5%, transparent 4px);
+    color: #fff;
+    padding: 11px 1px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    margin: 0 auto; */
+    background: linear-gradient(45deg, transparent 4px, #000 0, #000 98.5%, transparent 4px);
+    color: #fff;
+    padding: 11px 10px;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 150px;
+    width: 100%;
+}
+
+.blog h2 , h3 {
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.blog h3{
+    margin-top: 20px;
+}
+
+.blog h2 {
+    @apply
+    text-start
+}
+
+.blog p{
+    @apply
+    text-[16px] 
+    font-light 
+    pb-[20px] 
+    leading-6
+}
+
+.blog figure{
+    padding: 20px 0px; 
+}
+.blog figure img{
+    border-radius: 20px;
+}
+
+.blog ul{
+    list-style: circle;
+    padding-left: 18px;
+}
+.blog ul li{
+    padding-bottom: 10px;
+}

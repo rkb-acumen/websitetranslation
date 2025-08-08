@@ -1,0 +1,5 @@
+@media (width < 768px) {
+    .accord:first-child{
+      border-top-width: 1px;
+    }
+}

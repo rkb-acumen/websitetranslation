@@ -1,0 +1,550 @@
+"use client"
+import styles from './OurService.module.css'
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useGSAP } from '@gsap/react';
+import { gsap, Linear } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useMediaQuery } from 'react-responsive';
+import MobileService from './MobileServices/MobileService';
+import "./Ourservices.css"
+import HeadingAnimation from '../HeadingAnimation/HeadingAnimation';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+const OurServices = () => {
+    HeadingAnimation("text-animation");
+    const [selectedService, setSelectedService] = useState(1);
+    const isDesktop = useMediaQuery({ query: '(min-width:  1440px)' });
+    const isDesktopmin = useMediaQuery({ query: '(min-width:  1024px)' });
+
+
+    useGSAP(() => {
+        if (isDesktop) {
+            const ctx = gsap.context(() => {
+                // let tl = gsap.timeline({
+                //     scrollTrigger: {
+                //         trigger: '#OURSERVICE',
+                //         start: 'top -5%',
+                //         end: '+=800%',
+                //         pin: true,
+                //         scrub: true,
+                //         markers: true,
+                //         onUpdate: (self) => {
+                //             const progress = self.progress;
+                //             const totalHeight = 1651.3;
+                //             const numberOfServices = 8;
+
+                //             gsap.to('#path', {
+                //                 height: totalHeight * progress ,
+                //                 overwrite: 'auto'
+                //             });
+
+                //             const index = Math.ceil(progress * numberOfServices);
+                //             setSelectedService(Math.min(Math.max(index, 1), numberOfServices));
+                //         }
+                //     }
+                // });
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#OURSERVICE',
+                        start: 'top -5%',
+                        end: '+=800%',
+                        pin: true,
+                        scrub: true,
+                        onUpdate: (self) => {
+                            const progress = self.progress;
+                            const totalHeight = 1651.3;
+                            const numberOfServices = 8;
+
+                            // Calculate the new height based on progress
+                            const currentHeight = totalHeight * progress;
+
+                            // Animate the height of the rect
+                            gsap.to('#path', {
+                                height: currentHeight,
+                                overwrite: 'auto'
+                            });
+
+                            // Calculate the current service index (1-based)
+                            let index = Math.ceil(progress * numberOfServices);
+                            index = Math.min(Math.max(index, 1), numberOfServices);
+
+                            // Update the selected service and ensure it's synced with the height
+                            setSelectedService((prevIndex) => {
+                                if (prevIndex !== index) {
+                                    return index;
+                                }
+                                return prevIndex;
+                            });
+                        }
+                    }
+                });
+
+                tl.to({}, { duration: 1 });
+            });
+
+            return () => {
+                ctx.revert();
+            };
+        } else if (isDesktopmin) {
+            let ctx = gsap.context(() => {
+
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#OURSERVICE',
+                        start: 'top -31%',
+                        end: '+=800%',
+                        pin: true,
+                        scrub: true,
+                        onUpdate: (self) => {
+                            const progress = self.progress;
+                            const totalHeight = 1651.3;
+                            const numberOfServices = 8;
+                            const currentHeight = totalHeight * progress;
+
+                            gsap.to('#path', {
+                                height: currentHeight,
+                                overwrite: 'auto'
+                            });
+
+                            let index = Math.ceil(progress * numberOfServices);
+                            index = Math.min(Math.max(index, 1), numberOfServices);
+
+                            setSelectedService((prevIndex) => {
+                                if (prevIndex !== index) {
+                                    return index;
+                                }
+                                return prevIndex;
+                            });
+                        }
+                    }
+                });
+
+                tl.to({}, { duration: 1 });
+            });
+
+            return () => {
+                ctx.revert();
+            };
+        }
+    }, [isDesktop, setSelectedService]);
+
+
+    useGSAP(() => {
+        // Apply fade-out, then fade-in with y movement
+        gsap.fromTo('.service-content',
+            {
+                opacity: 0,
+                y: 50  // Start from below
+            },
+            {
+                opacity: 1,
+                y: 0,  // End at the original position
+                duration: 0.5,
+                stagger: 0.2
+            }
+        );
+    }, [selectedService]);
+
+
+    useGSAP(() => {
+        gsap.fromTo(
+            '#mask-rect',
+            { y: '-100%' }, // Start with the mask off-screen
+            {
+                y: '100%', // End with the mask covering the entire SVG
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#Layer_1',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: true,
+                }
+            }
+        );
+    }, []);
+
+
+
+    const handleClick = (index) => {
+        setSelectedService(index);
+    };
+
+
+    return (
+        <>
+            <div id='OURSERVICE' className={`OURSERVICE pt-[60px] sm:pt-[100px] ${styles.dot_service_parttern}`}>
+
+
+                <div className=''>
+                    <div className={`pl-[15px] pr-[15px] sm:pl-[60px] sm:pr-[60px] mb-[60px] sm:mb-[100px]`}>
+                        <h2 className='font-30 opacity-80 font-normal text-animation'>Our Services</h2>
+                    </div>
+
+                    <div className={`${styles.service_bg} pb-[200px] lg:block hidden`}>
+                        <div className='grid grid-cols-3 items-center'>
+                            <div className='flex mx-auto'>
+                                <div className='w-[0.55rem] '>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width={17.5} viewBox="0 0 77.6 1681.2">
+                                        <defs>
+                                            <style>{`
+                                                    .cls-1 {
+                                                    fill: #d7d7d7;
+                                                    } 
+                                                    .cls-3 {
+                                                    fill: #f54d28;  
+                                                    height: 0;
+                                                    }
+                                                  `}
+                                            </style>
+                                        </defs>
+                                        <g>
+                                            <g id="Layer_1">
+                                                <rect className="cls-1" x="31.5" y="9.8" width="14.5" height="1651.3" rx="7.3" ry="7.3" />
+                                                <rect className="cls-3" id='path' x="31.5" y="9.8" width="14.5" height="1651.3" rx="7.3" ry="7.3" />
+                                                <g>
+                                                    <path className={`  ${selectedService >= 1 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,42h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 1 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,43.5c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,40.4h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 2 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,271.8h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 2 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,273.3c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,270.3h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 3 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,501.7h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 3 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,503.2c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,500.1h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 4 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,741.6h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 4 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,743.1c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,740h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 5 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,971.5h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 5 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,973c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,969.9h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 6 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,1201.3h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 6 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,1202.8c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,1199.8h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 7 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,1431.2h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 7 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,1432.7c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,1429.6h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                                <g>
+                                                    <path className={`  ${selectedService >= 8 ? 'fill-black' : 'fill-white'} cls-2`} d="M38.8,1661.1h0c-8.9,0-16.1-7.2-16.1-16.1h0c0-8.9,7.1-16.1,16.1-16.1h0c8.9,0,16.1,7.2,16.1,16.1h0c0,8.9-7.2,16.1-16.1,16.1h0Z" />
+                                                    <path className={`  ${selectedService >= 8 ? 'fill-white' : 'fill-black'} cls-2`} d="M38.8,1662.6c-9.7,0-17.6-7.9-17.6-17.6s7.9-17.6,17.6-17.6,17.6,7.9,17.6,17.6-7.1,16.7-16.1,17.5h0c0,0-1.5.1-1.5.1ZM37.4,1659.5h1.4c8,0,14.6-6.5,14.6-14.6s-6.5-14.6-14.6-14.6-14.6,6.6-14.6,14.6,5.8,13.8,13.2,14.5Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div className='flex flex-col pl-6 text-[16px] text-[#949494]'>
+                                    <p className={`  our-serices-tab text-gray-500   transition-colors duration-200 ease-out ${selectedService === 1 ? 'text-gray-950' : 'text-gray-500'}`}  >Cloud migration</p>
+
+                                    <p className={` our-serices-tab text-gray-500    transition-colors duration-200 ease-out ${selectedService === 2 ? 'text-gray-950' : 'text-gray-500'}`}  >Data and analytics implementation </p>
+
+                                    <p className={`  our-serices-tab text-gray-500  transition-colors duration-200 ease-out ${selectedService === 3 ? 'text-gray-950' : 'text-gray-500'}`}  >App and web development</p>
+
+                                    <p className={`  our-serices-tab text-gray-500   transition-colors duration-200 ease-out ${selectedService === 4 ? 'text-gray-950' : 'text-gray-500'}`}  >API implementation and migration</p>
+
+                                    <p className={` our-serices-tab text-gray-500  transition-colors duration-200 ease-out ${selectedService === 5 ? 'text-gray-950' : 'text-gray-500'}`}  >Technical DB support</p>
+
+                                    <p className={`  our-serices-tab text-gray-500 transition-colors duration-200 ease-out ${selectedService === 6 ? 'text-gray-950' : 'text-gray-500'}`}  >AI and ML solutions</p>
+
+                                    <p className={` our-serices-tab text-gray-500  transition-colors duration-200 ease-out ${selectedService === 7 ? 'text-gray-950' : 'text-gray-500'}`}  >RPA- Robotic process automation</p>
+
+                                    <p className={`  our-serices-tab text-gray-500 transition-colors duration-200 ease-out ${selectedService === 8 ? 'text-gray-950' : 'text-gray-500'}`}  >Quality Assurance implementation</p>
+                                </div>
+                            </div>
+                            <div className='flex justify-center items-center mx-auto'>
+                                {selectedService === 1 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>Cloud migration  Onboarding Services</h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 2 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>Data and analytics implementation </h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 3 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>App and web development</h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 4 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>API implementation and migration</h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 5 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>Technical DB suppor</h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 6 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>AI and ML solutions </h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 7 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>RPA- Robotic process automation</h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 8 && (
+                                    <div className='flex gap-6 service-content'>
+                                        <div>
+                                            <h2 className='text-[40px]'>Quality Assurance implementation</h2>
+                                            <div className='pt-3'>
+                                                <p className='text-[#454545]'>Acumen Velocity, a Google cloud partner based out of Orange County, CA – is proud to assist Google Cloud customers with onboarding.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <Link href={'/'}>
+                                                <Image
+                                                    src={'/OurService/linksvg.svg'}
+                                                    alt='link'
+                                                    width={200}
+                                                    height={200}
+                                                    className='w-28'
+                                                />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className={`flex justify-center items-center mx-auto `}>
+                                {selectedService === 1 && (
+                                    <div className='services rounded-[27px] service-content'>
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 2 && (
+                                    <div className='services rounded-[27px] service-content'>
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 3 && (
+                                    <div className='services rounded-[27px] service-content'>
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 4 && (
+                                    <div className='services rounded-[27px] service-content'>
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 5 && (
+                                    <div className='services rounded-[27px] service-content' >
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 6 && (
+                                    <div className='services rounded-[27px] service-content'>
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 7 && (
+                                    <div className='services rounded-[27px] service-content' >
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                                {selectedService === 8 && (
+                                    <div className='services rounded-[27px] service-content'>
+                                        <div className='p-2'>
+                                            <Image
+                                                src={'/OurService/seviceslftimg.png'}
+                                                alt='service'
+                                                width={500}
+                                                height={500}
+                                                className='w-[19rem] h-auto rounded-[20px]'
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className='lg:hidden  block'>
+                        <MobileService />
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default OurServices;
